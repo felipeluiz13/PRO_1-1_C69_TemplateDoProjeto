@@ -17,8 +17,6 @@ export default class TransactionScreen extends Component {
   getCameraPermissions = async domState => {
 
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
-    //const { status } = await Permissions.askAsync(Permissions);
-    //const { status } = await Permissions.askAsync(CAMERA);
 
     this.setState({
        /*status === "granted" é verdadeiro se o usuário concedeu permissão
@@ -55,39 +53,15 @@ export default class TransactionScreen extends Component {
           {hasCameraPermissions ? scannedData : "Solicitar Permissão para a Câmera"}
         </Text>
 
-        {/*
-        <TouchableOpacity
-          style={[styles.button, { marginTop: 25 }]}
-          onPress= this.getCameraPermissions("scanner")}
-        >
-          <Text style={styles.buttonText}>Digitalizar QR Code</Text>
-        </TouchableOpacity>
-        */}
-
-        {/*
+        
         <TouchableOpacity
           style={[styles.button, { marginTop: 25 }]}
           onPress={() => this.getCameraPermissions("scanner")}
         >
           <Text style={styles.buttonText}>Digitalizar QR Code</Text>
         </TouchableOpacity>
-        */}
+        
 
-        {/*
-        <TouchableOpacity
-          style={[styles.button, { marginTop: 25 }]}
-          onPress={() => this.getCameraPermissions()}
-        >
-          <Text style={styles.buttonText}>Digitalizar QR Code</Text>
-        </TouchableOpacity>
-        */}
-
-        {/*
-        <TouchableOpacity
-          style={[styles.button, { marginTop: 25 }]}
-          onPress={() => this.getCameraPermissions("scanner")}
-        >
-        */}
 
       </View>
     );
